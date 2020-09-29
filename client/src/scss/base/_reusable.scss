@@ -1,45 +1,102 @@
-.center {
+.ruCenter {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.vertical-center {
+.ruVerticalCenter {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.mtb10 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.pl-1 {
+  padding-left: 10px;
 }
 
-.mtb20 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.my-1 {
+  margin: 10px 0px;
 }
 
-.mtb30 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+.my-2 {
+  margin: 20px 0px;
 }
 
-.mt50 {
+.my-3 {
+  margin: 30px 0px;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.ml-2 {
+  margin-left: 20px;
+}
+
+.ml-3 {
+  margin-left: 30px;
+}
+
+.ml-a {
+  margin-left: auto;
+}
+
+.mt-5 {
   margin-top: 50px;
 }
 
-.mt80 {
+.mt-8 {
   margin-top: 80px;
 }
 
-.mr10 {
+.mr-1 {
   margin-right: 10px;
 }
-.mr20 {
+.mr-2 {
   margin-right: 20px;
 }
+.mr-3 {
+  margin-right: 30px;
+}
+
+.mr-a {
+  margin-right: auto;
+}
+
+.ml-a {
+  margin-left: auto;
+}
+// .mtb10 {
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+// }
+
+// .mtb20 {
+//   margin-top: 20px;
+//   margin-bottom: 20px;
+// }
+
+// .mtb30 {
+//   margin-top: 30px;
+//   margin-bottom: 30px;
+// }
+
+// .mt50 {
+//   margin-top: 50px;
+// }
+
+// .mt80 {
+//   margin-top: 80px;
+// }
+
+// .mr10 {
+//   margin-right: 10px;
+// }
+// .mr20 {
+//   margin-right: 20px;
+// }
 
 .link {
   color: $blue1;
@@ -56,20 +113,20 @@
 
   // now, width is specified and margin left and right is set to auto
   min-width: 300px;
-  max-width: 1500px;
+  max-width: 2000px;
   width: 95vw;
   margin-left: auto;
   margin-right: auto;
 }
 
-.row {
+.ruRow {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.col {
+.ruCol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

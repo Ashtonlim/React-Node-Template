@@ -1,13 +1,11 @@
 import React from "react";
-import Table from "./subComponents/Table";
 import MainLayout from "./layouts/MainLayout";
 
 function Home() {
   return (
     <MainLayout>
       <section>
-        {/* <AreaChart /> */}
-        <Table />
+        <h1>Hello, World!</h1>
       </section>
     </MainLayout>
   );

@@ -1,40 +1,34 @@
-import React, { useState } from 'react'
-import { Redirect } from 'react-router-dom'
-import { Form, Input, Button } from 'antd'
-// import { handleUsername, handleEmail, handlePassword } from "./validation";
-import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons'
-import MainLayout from './layouts/MainLayout'
-
-const layout = {
-  labelCol: { span: 8 },
-  wrapperCol: { span: 16 },
-}
+import React, { useState } from "react";
+import { Redirect } from "react-router-dom";
+import { Form, Input, Button } from "antd";
+import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
+import MainLayout from "./layouts/MainLayout";
 
 export default () => {
   const [vals, setVals] = useState({
-    email: '',
-    username: '',
-    password: '',
-    repassword: '',
-  })
+    email: "",
+    username: "",
+    password: "",
+    repassword: "",
+  });
 
-  const [form] = Form.useForm()
+  const [form] = Form.useForm();
 
   const handleInput = (e) => {
-    let { name, val } = e.target
-    setVals({ ...vals, [name]: val })
-  }
+    let { name, val } = e.target;
+    setVals({ ...vals, [name]: val });
+  };
 
   const onFinish = (values) => {
-    console.log('Success:', values)
-  }
+    console.log("Success:", values);
+  };
 
   const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo)
-  }
+    console.log("Failed:", errorInfo);
+  };
 
   if (false) {
-    return <Redirect to={this.state.redirect} />
+    return <Redirect to={this.state.redirect} />;
   } else
     return (
       <MainLayout>
@@ -58,12 +52,12 @@ export default () => {
                 name="Email"
                 rules={[
                   {
-                    type: 'email',
-                    message: 'The input is not valid E-mail!',
+                    type: "email",
+                    message: "The input is not valid E-mail!",
                   },
                   {
                     required: true,
-                    message: 'Please input your Email!',
+                    message: "Please input your Email!",
                   },
                 ]}
               >
@@ -80,7 +74,7 @@ export default () => {
                 rules={[
                   {
                     required: true,
-                    message: 'Please input your username!',
+                    message: "Please input your username!",
                   },
                 ]}
               >
@@ -98,7 +92,7 @@ export default () => {
                 rules={[
                   {
                     required: true,
-                    message: 'Please input your password!',
+                    message: "Please input your password!",
                   },
                 ]}
               >
@@ -113,22 +107,22 @@ export default () => {
               <Form.Item
                 name="Re-type password"
                 label="Re-type password"
-                dependencies={['password']}
+                dependencies={["password"]}
                 hasFeedback
                 rules={[
                   {
                     required: true,
-                    message: 'Please Re-type your password!',
+                    message: "Please Re-type your password!",
                   },
                   ({ getFieldValue }) => ({
                     validator(rule, value) {
                       // getFieldValue is case-sensitive
-                      if (!value || getFieldValue('Password') === value) {
-                        return Promise.resolve()
+                      if (!value || getFieldValue("Password") === value) {
+                        return Promise.resolve();
                       }
                       return Promise.reject(
-                        'The two passwords that you entered do not match!'
-                      )
+                        "The two passwords that you entered do not match!"
+                      );
                     },
                   }),
                 ]}
@@ -150,5 +144,5 @@ export default () => {
           </div>
         </section>
       </MainLayout>
-    )
-}
+    );
+};

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Redirect, Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { Form, Input, Button, Checkbox } from "antd";
 
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
@@ -22,21 +22,13 @@ export default () => {
   const onLogin = () => {
     console.log("login");
   };
-
-  function onChange(e) {
-    console.log(`checked = ${e.target.checked}`);
-  }
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
 
   const handleInput = (e) => {
     let { name, val } = e.target;
     setVals({ ...vals, [name]: val });
-  };
-  const onFinish = (values) => {
-    console.log("Success:", values);
-  };
-
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
   };
 
   if (false) {
@@ -54,7 +46,7 @@ export default () => {
                 initialValues={{
                   remember: true,
                 }}
-                onFinish={onFinish}
+                onFinish={onLogin}
                 onFinishFailed={onFinishFailed}
                 size="large"
                 requiredMark={false}
@@ -96,7 +88,7 @@ export default () => {
                 </Form.Item>
 
                 <Form.Item
-                  buttonItemLayout={null}
+                  // buttonItemLayout={null}
                   name="remember"
                   valuePropName="checked"
                 >
@@ -104,9 +96,7 @@ export default () => {
                 </Form.Item>
 
                 <Form.Item>
-                  <Button type="primary" htmlType="submit">
-                    Submit
-                  </Button>
+                  <Button type="primary">Submit</Button>
                 </Form.Item>
               </Form>
             </div>
