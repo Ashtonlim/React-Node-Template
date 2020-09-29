@@ -24,3 +24,9 @@ main {
 input {
   display: block;
 }
+
+.shadow {
+  box-shadow: 0px 2px 21px 0px rgba(82, 82, 82, 0.1);
+  background-color: $white;
+  transition: all 0.3s;
+}
