@@ -1,3 +1,3 @@
 # React Node Template
 
-This is a template for React and Node App
+This is a template for a client server MERN App
