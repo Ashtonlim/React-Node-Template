@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
-import { Form, Input, Button } from "antd";
-import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
-import MainLayout from "./layouts/MainLayout";
+import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
+import { Form, Input, Button } from 'antd';
+import { UserOutlined, LockOutlined, MailOutlined } from '@ant-design/icons';
+import MainLayout from './layouts/MainLayout';
 
-export default () => {
+const Register = () => {
   const [vals, setVals] = useState({
-    email: "",
-    username: "",
-    password: "",
-    repassword: "",
+    email: '',
+    username: '',
+    password: '',
+    repassword: '',
   });
 
   const [form] = Form.useForm();
@@ -20,11 +20,11 @@ export default () => {
   };
 
   const onFinish = (values) => {
-    console.log("Success:", values);
+    console.log('Success:', values);
   };
 
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+    console.log('Failed:', errorInfo);
   };
 
   if (false) {
@@ -52,12 +52,12 @@ export default () => {
                 name="Email"
                 rules={[
                   {
-                    type: "email",
-                    message: "The input is not valid E-mail!",
+                    type: 'email',
+                    message: 'The input is not valid E-mail!',
                   },
                   {
                     required: true,
-                    message: "Please input your Email!",
+                    message: 'Please input your Email!',
                   },
                 ]}
               >
@@ -74,7 +74,7 @@ export default () => {
                 rules={[
                   {
                     required: true,
-                    message: "Please input your username!",
+                    message: 'Please input your username!',
                   },
                 ]}
               >
@@ -92,7 +92,7 @@ export default () => {
                 rules={[
                   {
                     required: true,
-                    message: "Please input your password!",
+                    message: 'Please input your password!',
                   },
                 ]}
               >
@@ -107,21 +107,21 @@ export default () => {
               <Form.Item
                 name="Re-type password"
                 label="Re-type password"
-                dependencies={["password"]}
+                dependencies={['password']}
                 hasFeedback
                 rules={[
                   {
                     required: true,
-                    message: "Please Re-type your password!",
+                    message: 'Please Re-type your password!',
                   },
                   ({ getFieldValue }) => ({
                     validator(rule, value) {
                       // getFieldValue is case-sensitive
-                      if (!value || getFieldValue("Password") === value) {
+                      if (!value || getFieldValue('Password') === value) {
                         return Promise.resolve();
                       }
                       return Promise.reject(
-                        "The two passwords that you entered do not match!"
+                        'The two passwords that you entered do not match!'
                       );
                     },
                   }),
@@ -146,3 +146,5 @@ export default () => {
       </MainLayout>
     );
 };
+
+export default Register;

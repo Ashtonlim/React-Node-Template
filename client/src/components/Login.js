@@ -1,29 +1,29 @@
-import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
-import { Form, Input, Button, Checkbox } from "antd";
+import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
+import { Form, Input, Button, Checkbox } from 'antd';
 
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
-import MainLayout from "./layouts/MainLayout";
+import MainLayout from './layouts/MainLayout';
 
-export default () => {
+const Login = () => {
   const [vals, setVals] = useState({
-    username: "",
-    password: "",
+    username: '',
+    password: '',
     usernameReqPF: false,
     pwdReqPF: false,
-    errMsg: "",
+    errMsg: '',
     redirect: null,
-    loginErrMsg: "",
+    loginErrMsg: '',
   });
 
   const [form] = Form.useForm();
 
   const onLogin = () => {
-    console.log("login");
+    console.log('login');
   };
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+    console.log('Failed:', errorInfo);
   };
 
   const handleInput = (e) => {
@@ -57,7 +57,7 @@ export default () => {
                   rules={[
                     {
                       required: true,
-                      message: "Please input your username!",
+                      message: 'Please input your username!',
                     },
                   ]}
                 >
@@ -75,7 +75,7 @@ export default () => {
                   rules={[
                     {
                       required: true,
-                      message: "Please input your password!",
+                      message: 'Please input your password!',
                     },
                   ]}
                 >
@@ -105,3 +105,5 @@ export default () => {
       </MainLayout>
     );
 };
+
+export default Login;

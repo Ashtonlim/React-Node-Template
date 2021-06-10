@@ -1,16 +1,16 @@
-import React from "react";
-import { Row, Col } from "antd";
+import React from 'react';
+import { Row, Col } from 'antd';
 
 function Footer() {
   return (
     <footer className="site-footer">
       <Row
-        style={{ width: "100%", padding: "0px 20px" }}
+        style={{ width: '100%', padding: '0px 20px' }}
         justify="center"
         align="middle"
       >
         <Col xs={{ span: 24 }} md={{ span: 4 }}>
-          <span>Valley</span>
+          <span>App</span>
         </Col>
 
         <Col xs={{ span: 24 }} md={{ span: 20 }}>

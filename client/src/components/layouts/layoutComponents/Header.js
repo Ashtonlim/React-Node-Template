@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Row, Col } from "antd";
-import Autocomplete from "./Autocomplete";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Row, Col } from 'antd';
+import Autocomplete from './Autocomplete';
 
 const LoggedInOutView = (props) => {
   if (false) {
@@ -31,13 +31,13 @@ const Header = () => {
   return (
     <header className="App-header shadow">
       <Row
-        style={{ width: "100%", padding: "0px 20px" }}
+        style={{ width: '100%', padding: '0px 20px' }}
         justify="center"
         align="middle"
       >
         <Col xs={{ span: 6 }} md={{ span: 2 }}>
           <Link id="logo" to="/">
-            Valley
+            App
           </Link>
         </Col>
 
@@ -46,7 +46,7 @@ const Header = () => {
         </Col>
 
         <Col xs={{ span: 0 }} md={{ span: 10 }}>
-          <nav style={{ justifyContent: "flex-end" }}>
+          <nav style={{ justifyContent: 'flex-end' }}>
             <ul className="ruRow nav-items">
               <li className="nav-item">
                 <Link to="/">Item 1</Link>
